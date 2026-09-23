@@ -1,4 +1,4 @@
-"""Centralized prompt budget management for AgenticTM agents.
+"""Centralized prompt budget management for ArgusTM agents.
 
 Replaces ad-hoc character slicing with a priority-based fitting strategy
 that adapts to the model's context window and generation budget.

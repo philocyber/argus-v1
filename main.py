@@ -1,4 +1,4 @@
-"""AgenticTM — Quick start entry point."""
+"""ArgusTM — Quick start entry point."""
 
 from agentictm.core import AgenticTM
 

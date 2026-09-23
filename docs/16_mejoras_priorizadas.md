@@ -1,4 +1,4 @@
-# AgenticTM — Lista Priorizada de Mejoras
+# ArgusTM — Lista Priorizada de Mejoras
 
 > Consolidación de las mejoras identificadas en los documentos de evaluación:
 > - `docs/13_*` — Evaluación técnica

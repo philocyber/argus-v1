@@ -1,4 +1,4 @@
-# Análisis Objetivo y Roadmap de Evolución (AgenticTM)
+# Análisis Objetivo y Roadmap de Evolución (ArgusTM)
 
 Fecha: 2026-02-24
 
@@ -43,7 +43,7 @@ He analizado la arquitectura, el código, el flujo de LangGraph, las habilidades
 
 ## 3. Plan de Acción Futuro (Roadmap)
 
-Basado en esta evaluación, propongo el siguiente plan de acción priorizado para llevar a AgenticTM al siguiente nivel de madurez (Production-Grade):
+Basado en esta evaluación, propongo el siguiente plan de acción priorizado para llevar a ArgusTM al siguiente nivel de madurez (Production-Grade):
 
 ### Fase 1: Estabilidad y Correcciones Inmediatas (Corto Plazo)
 1. **Arreglar el Parsing de PDF en Uploads:** Importar `PyPDFLoader` (o `pdfplumber`/`pymupdf`) en `server.py` para extraer el texto real de los PDFs adjuntos por el usuario antes de inyectarlos al prompt.

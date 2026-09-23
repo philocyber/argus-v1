@@ -1,4 +1,4 @@
-"""AgenticTM agents.
+"""ArgusTM agents.
 
 Agent architecture (1 per methodology + debate + AI specialist):
 

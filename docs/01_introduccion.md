@@ -5,11 +5,11 @@
 
 ---
 
-## ¿Qué es AgenticTM?
+## ¿Qué es ArgusTM?
 
-**AgenticTM** (Agentic Threat Modeler) es un sistema multi-agente de threat modeling que orquesta **12 agentes especializados** de inteligencia artificial para analizar la arquitectura de un sistema de software y producir un modelo de amenazas profesional.
+**ArgusTM** (ArgusTM) es un sistema multi-agente de threat modeling que orquesta **12 agentes especializados** de inteligencia artificial para analizar la arquitectura de un sistema de software y producir un modelo de amenazas profesional.
 
-A diferencia de las herramientas tradicionales que dependen de un solo modelo o un checklist estático, AgenticTM despliega un **equipo virtual de expertos en seguridad**: cada agente domina una metodología específica (STRIDE, PASTA, Attack Trees, MAESTRO, OWASP AI), y después un **debate adversarial** (Red Team vs Blue Team) valida, escala y refina las amenazas encontradas.
+A diferencia de las herramientas tradicionales que dependen de un solo modelo o un checklist estático, ArgusTM despliega un **equipo virtual de expertos en seguridad**: cada agente domina una metodología específica (STRIDE, PASTA, Attack Trees, MAESTRO, OWASP AI), y después un **debate adversarial** (Red Team vs Blue Team) valida, escala y refina las amenazas encontradas.
 
 El resultado es un **Threat Model completo** con:
 - CSV de amenazas con scoring DREAD (compatible con plantillas organizacionales)
@@ -22,7 +22,7 @@ El resultado es un **Threat Model completo** con:
 
 ## Origen e Inspiración
 
-AgenticTM nace de la convergencia de tres líneas de trabajo:
+ArgusTM nace de la convergencia de tres líneas de trabajo:
 
 ### 1. Necesidad Operativa
 El equipo de AppSec realizaba threat models manuales que consumían **3-5 días por sistema**. Con docenas de proyectos en pipeline, la carga operativa era insostenible. Se necesitaba una herramienta que transformara a AppSec de "operador" a "habilitador" — manteniendo la profundidad de análisis pero reduciendo el tiempo a **minutos**.
@@ -37,7 +37,7 @@ El diseño del pipeline se inspira directamente en [TradingAgents v0.4.0](https:
 - **Patrón Quick/Deep Thinker** (modelos rápidos para triage, modelos profundos para síntesis)
 - **Orquestación LangGraph** con estado compartido tipado
 
-AgenticTM adapta esta arquitectura: analistas financieros → analistas de seguridad, Bull/Bear → Red/Blue Team, Research Manager → Threat Synthesizer.
+ArgusTM adapta esta arquitectura: analistas financieros → analistas de seguridad, Bull/Bear → Red/Blue Team, Research Manager → Threat Synthesizer.
 
 ---
 
@@ -45,7 +45,7 @@ AgenticTM adapta esta arquitectura: analistas financieros → analistas de segur
 
 ```mermaid
 graph LR
-    A["📄 Documento de<br/>arquitectura"] --> B["🤖 AgenticTM<br/>12 agentes + RAG"]
+    A["📄 Documento de<br/>arquitectura"] --> B["🤖 ArgusTM<br/>12 agentes + RAG"]
     B --> C["📊 CSV de amenazas<br/>STRIDE + DREAD"]
     B --> D["📝 Reporte completo<br/>Markdown + LaTeX"]
     B --> E["🔀 Diagramas DFD<br/>Mermaid"]
@@ -59,7 +59,7 @@ graph LR
     style F fill:#1a3c34,stroke:#10b981,color:#fff
 ```
 
-| Problema | Cómo lo resuelve AgenticTM |
+| Problema | Cómo lo resuelve ArgusTM |
 |----------|---------------------------|
 | TM manual toma 3-5 días | Pipeline completo en 15-45 minutos |
 | Un solo analista = una sola perspectiva | 5 metodologías diferentes en paralelo |
@@ -193,9 +193,9 @@ graph TB
 
 ## Inspiración Académica y Práctica
 
-Los frameworks y fuentes académicas que alimentan a AgenticTM incluyen:
+Los frameworks y fuentes académicas que alimentan a ArgusTM incluyen:
 
-| Framework | Uso en AgenticTM | Agente(s) |
+| Framework | Uso en ArgusTM | Agente(s) |
 |-----------|------------------|-----------|
 | **STRIDE** (Microsoft, 1999) | Análisis por elemento del sistema | STRIDE Analyst |
 | **PASTA** (VerSprite, 2012) | Análisis orientado a riesgo de negocio | PASTA Analyst |

@@ -1,6 +1,6 @@
-# Contributing to AgenticTM
+# Contributing to ArgusTM
 
-Thank you for your interest in improving AgenticTM! This document explains how to get started, the workflow we follow, and what to expect during review.
+Thank you for your interest in improving ArgusTM! This document explains how to get started, the workflow we follow, and what to expect during review.
 
 ## Code of Conduct
 
@@ -12,8 +12,8 @@ Be respectful, constructive, and inclusive. Cybersecurity is a serious domain; t
 2. **Clone** your fork locally:
 
 ```bash
-git clone https://github.com/<your-user>/agent-threat-modeler.git
-cd agent-threat-modeler
+git clone https://github.com/<your-user>/ArgusTM.git
+cd ArgusTM
 ```
 
 3. **Create a branch** from `main`:
@@ -82,7 +82,7 @@ ruff format agentictm/
 
 ## Reporting Issues
 
-Open an issue on [GitHub Issues](https://github.com/PhiloCyber/agent-threat-modeler/issues) with:
+Open an issue on [GitHub Issues](https://github.com/philocyber/ArgusTM/issues) with:
 
 - A clear title and description.
 - Steps to reproduce (if it's a bug).

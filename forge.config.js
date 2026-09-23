@@ -6,7 +6,7 @@ module.exports = {
   outDir: path.resolve(__dirname, 'dist'),
   hooks: {
     preMake: async () => {
-      // Kill any running AgenticTM instances to release file locks
+      // Kill any running ArgusTM instances to release file locks
       if (process.platform === 'win32') {
         try { execSync('taskkill /IM agentictm.exe /F /T 2>nul', { stdio: 'ignore' }); } catch {}
       }
@@ -16,7 +16,7 @@ module.exports = {
     },
   },
   packagerConfig: {
-    name: 'AgenticTM',
+    name: 'ArgusTM',
     executableName: 'agentictm',
     asar: false,
     icon: path.resolve(__dirname, 'electron', 'icons', 'icon'),
@@ -61,7 +61,7 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        name: 'AgenticTM',
+        name: 'ArgusTM',
         setupIcon: path.resolve(__dirname, 'electron', 'icons', 'icon.ico'),
       },
     },
@@ -69,8 +69,8 @@ module.exports = {
       name: '@electron-forge/maker-deb',
       config: {
         options: {
-          maintainer: 'AgenticTM',
-          homepage: 'https://github.com/PhiloCyber/agent-threat-modeler',
+          maintainer: 'PhiloCyber',
+          homepage: 'https://github.com/philocyber/ArgusTM',
           icon: path.resolve(__dirname, 'electron', 'icons', 'logo.png'),
         },
       },
@@ -79,7 +79,7 @@ module.exports = {
       name: '@electron-forge/maker-rpm',
       config: {
         options: {
-          homepage: 'https://github.com/PhiloCyber/agent-threat-modeler',
+          homepage: 'https://github.com/philocyber/ArgusTM',
           icon: path.resolve(__dirname, 'electron', 'icons', 'logo.png'),
         },
       },

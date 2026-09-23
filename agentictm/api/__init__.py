@@ -1,1 +1,1 @@
-"""AgenticTM Web API — FastAPI backend con SSE streaming."""
+"""ArgusTM Web API — FastAPI backend con SSE streaming."""

@@ -1,4 +1,4 @@
-"""AgenticTM Diagnostics — standalone system health checker.
+"""ArgusTM Diagnostics — standalone system health checker.
 
 Usage:
     python -m agentictm.diagnostics            # full check
@@ -324,7 +324,7 @@ def _print_report(report: dict[str, Any]) -> None:
 
     print()
     print("=" * 70)
-    print("  AgenticTM Diagnostics")
+    print("  ArgusTM Diagnostics")
     print(f"  {report['timestamp']}")
     print(f"  Python {report['python_version'].split()[0]} | {report['platform']}")
     print("=" * 70)
@@ -377,7 +377,7 @@ def _print_report(report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="AgenticTM Diagnostics")
+    parser = argparse.ArgumentParser(description="ArgusTM Diagnostics")
     parser.add_argument("--dry-run", action="store_true", help="Also run pipeline with mock LLMs")
     parser.add_argument("--json", action="store_true", help="Output raw JSON instead of pretty print")
     args = parser.parse_args()

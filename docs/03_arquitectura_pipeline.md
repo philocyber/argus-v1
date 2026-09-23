@@ -1,12 +1,12 @@
 # 03 — Arquitectura del Pipeline
 
-> 13 nodos, 6 fases, 3 modos de ejecución — la columna vertebral de AgenticTM.
+> 13 nodos, 6 fases, 3 modos de ejecución — la columna vertebral de ArgusTM.
 
 ---
 
 ## Visión General
 
-El pipeline de AgenticTM es un **grafo dirigido acíclico con un ciclo condicional** (debate loop), implementado sobre [LangGraph](https://github.com/langchain-ai/langgraph). LangGraph proporciona:
+El pipeline de ArgusTM es un **grafo dirigido acíclico con un ciclo condicional** (debate loop), implementado sobre [LangGraph](https://github.com/langchain-ai/langgraph). LangGraph proporciona:
 
 - **Estado tipado** (`ThreatModelState`) compartido entre todos los nodos
 - **Fan-out paralelo** con barrera de sincronización

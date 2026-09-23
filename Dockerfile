@@ -1,9 +1,9 @@
 # ─────────────────────────────────────────────────────────────
-# AgenticTM — Multi-Agent Threat Modeling System
+# ArgusTM — Multi-Agent Threat Modeling System
 # ─────────────────────────────────────────────────────────────
 FROM python:3.13-slim AS base
 
-LABEL maintainer="AgenticTM Team"
+LABEL maintainer="PhiloCyber"
 LABEL description="Multi-agent threat modeling system with RAG-enhanced analysis"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

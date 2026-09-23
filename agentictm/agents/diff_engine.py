@@ -240,9 +240,9 @@ def diff_to_sarif(diff: dict[str, Any], system_name: str = "System") -> str:
         "runs": [{
             "tool": {
                 "driver": {
-                    "name": "AgenticTM-Diff",
+                    "name": "ArgusTM-Diff",
                     "version": __version__,
-                    "informationUri": "https://github.com/agentictm",
+                    "informationUri": "https://github.com/philocyber/ArgusTM",
                 }
             },
             "results": results,

@@ -1,4 +1,4 @@
-"""Structured logging configuration for AgenticTM.
+"""Structured logging configuration for ArgusTM.
 
 Provides JSON-formatted structured logging with:
 - Correlation IDs per analysis (thread-local)

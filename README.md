@@ -2,7 +2,7 @@
   <img src="logo-philocyber.png" alt="PhiloCyber" width="120" />
 </p>
 
-<h1 align="center">AgenticTM</h1>
+<h1 align="center">ArgusTM</h1>
 
 <p align="center">
   <strong>Multi-agent threat modeling platform with LangGraph orchestration and local LLM support.</strong>
@@ -16,19 +16,11 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-A874C0" alt="License MIT" /></a>
 </p>
 
-<p align="center">
-  <img src="agenticTM.gif" alt="AgenticTM — end-to-end threat modeling pipeline dataflow" width="860" />
-</p>
-
-<p align="center">
-  <em>Full pipeline dataflow: from architecture input to prioritized threat report, across 6 phases and 14 specialized agents.</em>
-</p>
-
 ---
 
 ## Table of Contents
 
-- [What is AgenticTM?](#what-is-agentictm)
+- [What is ArgusTM?](#what-is-argustm)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Quick Start](#quick-start)
@@ -42,9 +34,9 @@
 
 ---
 
-## What is AgenticTM?
+## What is ArgusTM?
 
-AgenticTM is an open-source, multi-agent system that performs **end-to-end threat modeling** on software architectures. Drop in a system description — plain text, Mermaid diagram, Draw.io file, or architecture image — and a coordinated pipeline of specialized AI agents produces a prioritized threat report with STRIDE classification and DREAD scoring.
+ArgusTM is an open-source, multi-agent system that performs **end-to-end threat modeling** on software architectures. Drop in a system description — plain text, Mermaid diagram, Draw.io file, or architecture image — and a coordinated pipeline of specialized AI agents produces a prioritized threat report with STRIDE classification and DREAD scoring.
 
 The platform is **local-first**: it runs entirely on your machine using [Ollama](https://ollama.com/) with no data leaving your network. Cloud LLM providers (OpenAI, Anthropic, Google) are also supported when needed.
 
@@ -101,8 +93,8 @@ Phase V     Output Localizer -> Report Generator
 ### Option A — One-liner with Make (macOS)
 
 ```bash
-git clone https://github.com/PhiloCyber/agent-threat-modeler.git
-cd agent-threat-modeler
+git clone https://github.com/philocyber/ArgusTM.git
+cd ArgusTM
 make setup    # installs Ollama, pulls models, creates venv, installs deps, indexes KB
 make run      # starts the server at http://localhost:8000
 ```
@@ -160,8 +152,8 @@ ollama pull nomic-embed-text-v2-moe   # 8K context, multilingual MoE
 #### 3. Clone and install
 
 ```bash
-git clone https://github.com/PhiloCyber/agent-threat-modeler.git
-cd agent-threat-modeler
+git clone https://github.com/philocyber/ArgusTM.git
+cd ArgusTM
 
 python -m venv .venv
 source .venv/bin/activate    # Linux/macOS
@@ -190,25 +182,27 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 ### Option C — Docker
 
 ```bash
-git clone https://github.com/PhiloCyber/agent-threat-modeler.git
-cd agent-threat-modeler
+git clone https://github.com/philocyber/ArgusTM.git
+cd ArgusTM
 docker compose up
 ```
 
-This starts both the Ollama service and the AgenticTM API. The UI is available at `http://localhost:8000`.
+This starts both the Ollama service and the ArgusTM API. The UI is available at `http://localhost:8000`.
 
 > [!NOTE]
 > You still need to pull models inside the Ollama container after first launch:
 > ```bash
-> docker exec -it agent-threat-modeler-ollama-1 ollama pull qwen3:4b
-> docker exec -it agent-threat-modeler-ollama-1 ollama pull nomic-embed-text-v2-moe
+> docker exec -it agentictm-ollama ollama pull qwen3:4b
+> docker exec -it agentictm-ollama ollama pull nomic-embed-text-v2-moe
 > ```
 
 ---
 
 ## Configuration
 
-AgenticTM uses a `config.json` file for all settings. Running `python cli.py init` generates one automatically based on your system RAM.
+The Python package and CLI command remain `agentictm`, and environment variables retain the `AGENTICTM_` prefix for compatibility.
+
+ArgusTM uses a `config.json` file for all settings. Running `python cli.py init` generates one automatically based on your system RAM.
 
 To configure manually, copy the example:
 
@@ -255,7 +249,7 @@ All settings can be overridden via environment variables:
 
 ## RAG Sources
 
-AgenticTM uses a Retrieval-Augmented Generation (RAG) system that enriches every agent's analysis with context from security literature, previous threat models, and AI threat databases.
+ArgusTM uses a Retrieval-Augmented Generation (RAG) system that enriches every agent's analysis with context from security literature, previous threat models, and AI threat databases.
 
 ### Directory structure
 
@@ -405,7 +399,7 @@ agentictm/
 ├── parsers/       # Mermaid and Draw.io input parsers
 ├── state.py       # ThreatModelState (shared TypedDict)
 ├── config.py      # Configuration loading and validation
-├── core.py        # Main orchestrator (AgenticTM class)
+├── core.py        # Main orchestrator
 ├── models.py      # UnifiedThreat and API response schemas
 ├── diagnostics.py # System diagnostics (Ollama, models, vector stores)
 └── logging.py     # Structured logging setup
@@ -445,6 +439,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-AgenticTM is built and maintained by [PhiloCyber](https://philocyber.com) (Richie Prieto) — a Cybersecurity and AI security professional focused on practical, research-backed approaches to application security. If you have improvements ideas, suggestions, ways of doing this better please do not hesitate to contact me on linkedin or via [email](https://philocyber.com/contact).
+ArgusTM is built and maintained by [PhiloCyber](https://philocyber.com) (Richie Prieto) — a Cybersecurity and AI security professional focused on practical, research-backed approaches to application security. If you have improvements ideas, suggestions, ways of doing this better please do not hesitate to contact me on linkedin or via [email](https://philocyber.com/contact).
 
 Built with [LangChain](https://langchain.com/), [LangGraph](https://github.com/langchain-ai/langgraph), [Ollama](https://ollama.com/), [FastAPI](https://fastapi.tiangolo.com/), and [ChromaDB](https://www.trychroma.com/).

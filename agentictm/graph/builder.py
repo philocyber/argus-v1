@@ -1,4 +1,4 @@
-"""Graph builder for AgenticTM.
+"""Graph builder for ArgusTM.
 
 Pipeline (6 phases):
   I.     Architecture Parser (ingestion + VLM for images)
@@ -122,7 +122,7 @@ def build_graph(
     config: AgenticTMConfig,
     llm_factory: LLMFactory,
 ) -> StateGraph:
-    """Build the complete AgenticTM StateGraph.
+    """Build the complete ArgusTM StateGraph.
 
     Flow:
         architecture_parser (VLM-enabled)
@@ -636,7 +636,7 @@ def build_graph(
     graph.add_edge("output_localizer", "report_generator")
     graph.add_edge("report_generator", END)
 
-    logger.info("[Graph] AgenticTM graph built -- %d nodes", len(graph.nodes))
+    logger.info("[Graph] ArgusTM graph built -- %d nodes", len(graph.nodes))
     return graph
 
 
@@ -648,7 +648,7 @@ def compile_graph(
     """Build and compile the graph, ready to execute.
 
     Args:
-        config: AgenticTM configuration.
+        config: ArgusTM configuration.
         llm_factory: LLM factory instance.
         checkpointer: Optional LangGraph checkpointer for pipeline resume.
             When provided, enables resume-after-failure and HITL interrupt.

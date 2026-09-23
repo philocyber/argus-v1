@@ -1,4 +1,4 @@
-"""Shared fixtures for AgenticTM tests.
+"""Shared fixtures for ArgusTM tests.
 
 Provides a MockChatModel that returns canned JSON for each agent,
 an LLMFactory-compatible mock, and realistic pipeline state fixtures.

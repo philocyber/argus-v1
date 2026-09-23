@@ -1,4 +1,4 @@
-"""AgenticTM FastAPI Backend — SSE streaming + file upload.
+"""ArgusTM FastAPI Backend — SSE streaming + file upload.
 
 Endpoints:
   POST /api/analyze        — Start analysis (SSE stream)
@@ -57,7 +57,7 @@ async def lifespan(app: FastAPI):
       that are still emitting records don’t keep the process alive.
     • Cancel all pending asyncio tasks.
     """
-    logger.info("[AgenticTM] Server starting up on PID %d", os.getpid())
+    logger.info("[ArgusTM] Server starting up on PID %d", os.getpid())
 
     # ---- startup validation ----
     try:
@@ -85,7 +85,7 @@ async def lifespan(app: FastAPI):
     yield
 
     # ---- shutdown path ----
-    logger.info("[AgenticTM] Server shutting down -- cleaning up")
+    logger.info("[ArgusTM] Server shutting down -- cleaning up")
 
     # Close persistent store
     await _store.close()
@@ -100,7 +100,7 @@ async def lifespan(app: FastAPI):
         task.cancel()
     if tasks:
         await asyncio.gather(*tasks, return_exceptions=True)
-    logger.info("[AgenticTM] Cleanup complete")
+    logger.info("[ArgusTM] Cleanup complete")
 
 # ---------------------------------------------------------------------------
 # Console logging — ensures agent logs are visible in the server terminal
@@ -184,7 +184,7 @@ async def verify_api_key(
 # ---------------------------------------------------------------------------
 
 app = FastAPI(
-    title="AgenticTM API",
+    title="ArgusTM API",
     description=(
         "Multi-agent Threat Modeling System powered by LangChain/LangGraph + Ollama.\n\n"
         "## Features\n"
@@ -648,7 +648,7 @@ def _resolve_ollama_model(billion_params: float) -> str:
 
 
 def _create_agentictm(config=None):
-    """Create fresh AgenticTM instance, optionally with an overridden config."""
+    """Create fresh ArgusTM instance, optionally with an overridden config."""
     from agentictm.config import AgenticTMConfig
     from agentictm.core import AgenticTM
     return AgenticTM(config if config is not None else AgenticTMConfig.load())
@@ -1899,7 +1899,7 @@ async def _run_analysis_with_token_streaming(
 ) -> dict:
     """Run analysis with token-level streaming via astream_events().
 
-    Sets up the AgenticTM instance in a thread (sync setup), then
+    Sets up the ArgusTM instance in a thread (sync setup), then
     iterates over ``astream_events()`` in the async context, forwarding
     ``on_chat_model_stream`` events as SSE ``token`` events.
     """

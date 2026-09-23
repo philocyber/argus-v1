@@ -1,4 +1,4 @@
-"""Integration tests for the AgenticTM FastAPI server.
+"""Integration tests for the ArgusTM FastAPI server.
 
 Uses httpx.AsyncClient with FastAPI TestClient to verify all API
 endpoints work correctly, including auth, upload, results CRUD,

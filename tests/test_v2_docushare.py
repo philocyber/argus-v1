@@ -1,4 +1,4 @@
-"""DocuShare integration test for AgenticTM v2.0.0.
+"""DocuShare integration test for ArgusTM v2.0.0.
 
 Validates that all v2.0.0 improvements are correctly integrated end-to-end
 using a DocuShare-like architecture as the test case.
@@ -418,7 +418,7 @@ class TestSarifOutput:
         from agentictm.agents.report_generator import generate_sarif
         sarif = json.loads(generate_sarif(DOCUSHARE_STATE))
         driver = sarif["runs"][0]["tool"]["driver"]
-        assert driver["name"] == "AgenticTM"
+        assert driver["name"] == "ArgusTM"
         assert "version" in driver
         assert "rules" in driver
 

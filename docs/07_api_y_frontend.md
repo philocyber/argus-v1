@@ -6,7 +6,7 @@
 
 ## Visión General
 
-AgenticTM expone una **API REST** (FastAPI) y una **SPA** (Single-Page Application) embebida. El servidor maneja análisis asíncronos vía SSE, persiste resultados en SQLite + disco, y sirve una UI completa sin dependencias externas de build.
+ArgusTM expone una **API REST** (FastAPI) y una **SPA** (Single-Page Application) embebida. El servidor maneja análisis asíncronos vía SSE, persiste resultados en SQLite + disco, y sirve una UI completa sin dependencias externas de build.
 
 ```mermaid
 graph TB
@@ -51,7 +51,7 @@ graph TB
 |---------|--------|-------------|
 | `agentictm/api/server.py` | 1709 | FastAPI server: rutas, SSE, uploads, auth, CRUD, justificaciones |
 | `agentictm/api/storage.py` | 157 | `ResultStore` — SQLite async con `aiosqlite` |
-| `agentictm/api/__init__.py` | 2 | Docstring: `"""AgenticTM Web API — FastAPI backend con SSE streaming."""` |
+| `agentictm/api/__init__.py` | 2 | Docstring: `"""ArgusTM Web API — FastAPI backend con SSE streaming."""` |
 | `agentictm/api/static/index.html` | 2235 | SPA completa — CSS + HTML + JS en un solo archivo |
 
 ---

@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────
-# AgenticTM — docker-compose stack
+# ArgusTM — docker-compose stack
 #
 # Usage:
 #   docker compose up -d          # start both services
@@ -32,7 +32,7 @@ services:
       start_period: 30s
       retries: 5
 
-  # ── AgenticTM application ──
+  # ── ArgusTM application ──
   app:
     build:
       context: .

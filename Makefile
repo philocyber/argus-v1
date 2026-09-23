@@ -25,7 +25,7 @@ _RESET  := \033[0m
 
 help: ## Show this help
 	@echo ""
-	@echo "$(_BOLD)AgenticTM$(_RESET) — Makefile targets"
+	@echo "$(_BOLD)ArgusTM$(_RESET) — Makefile targets"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  $(_CYAN)%-16s$(_RESET) %s\n", $$1, $$2}'
@@ -156,9 +156,9 @@ index: init ## Index the knowledge base for RAG
 		echo "$(_YELLOW)[!]$(_RESET) Ollama not running -- skipping index. Run 'make index' later."; \
 	fi
 
-run: venv ollama-start ## Start the AgenticTM server
+run: venv ollama-start ## Start the ArgusTM server
 	@echo ""
-	@echo "$(_BOLD)Starting AgenticTM server...$(_RESET)"
+	@echo "$(_BOLD)Starting ArgusTM server...$(_RESET)"
 	@echo "  UI:  $(_CYAN)http://localhost:$(PORT)$(_RESET)"
 	@echo "  API: $(_CYAN)http://localhost:$(PORT)/api/health$(_RESET)"
 	@echo ""
@@ -166,14 +166,14 @@ run: venv ollama-start ## Start the AgenticTM server
 
 dev: venv ollama-start ## Start server in dev mode (auto-reload)
 	@echo ""
-	@echo "$(_BOLD)Starting AgenticTM server (dev mode)...$(_RESET)"
+	@echo "$(_BOLD)Starting ArgusTM server (dev mode)...$(_RESET)"
 	@echo "  UI:  $(_CYAN)http://localhost:$(PORT)$(_RESET)"
 	@echo ""
 	@$(PY) run.py --port $(PORT) --reload
 
 status: ## Check status of all dependencies
 	@echo ""
-	@echo "$(_BOLD)AgenticTM Status$(_RESET)"
+	@echo "$(_BOLD)ArgusTM Status$(_RESET)"
 	@echo "-------------------------------------------"
 	@if [ -f "$(PY)" ]; then \
 		echo "$(_GREEN)[OK]$(_RESET) Python venv     $$($(PY) --version)"; \
@@ -209,9 +209,9 @@ status: ## Check status of all dependencies
 	fi
 	@echo "-------------------------------------------"
 	@if curl -sf http://localhost:$(PORT)/api/health >/dev/null 2>&1; then \
-		echo "$(_GREEN)[OK]$(_RESET) AgenticTM       running at http://localhost:$(PORT)"; \
+		echo "$(_GREEN)[OK]$(_RESET) ArgusTM       running at http://localhost:$(PORT)"; \
 	else \
-		echo "  AgenticTM       not running (run: make run)"; \
+		echo "  ArgusTM       not running (run: make run)"; \
 	fi
 	@echo ""
 

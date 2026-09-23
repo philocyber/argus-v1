@@ -1,4 +1,4 @@
-"""AgenticTM server launcher.
+"""ArgusTM server launcher.
 
 Starts uvicorn with a pre-bound socket configured with SO_REUSEADDR so the
 port is immediately available again after the process stops (e.g. after Ctrl-C).
@@ -130,7 +130,7 @@ def _make_socket(host: str, port: int) -> socket.socket:
 def main() -> None:
     _install_crash_guards()
 
-    parser = argparse.ArgumentParser(description="Run AgenticTM server")
+    parser = argparse.ArgumentParser(description="Run ArgusTM server")
     parser.add_argument("--host", default=HOST)
     parser.add_argument("--port", type=int, default=DEFAULT_PORT)
     parser.add_argument("--reload", action="store_true",
@@ -154,7 +154,7 @@ def main() -> None:
     sys.stdout.flush()
 
     print(f"[AgenticTM] Listening on http://localhost:{actual_port}  (PID {os.getpid()})")
-    print("[AgenticTM] Press Ctrl-C to stop\n")
+    print("[ArgusTM] Press Ctrl-C to stop\n")
 
     # Configure structured logging (P6)
     from agentictm.logging import configure_logging

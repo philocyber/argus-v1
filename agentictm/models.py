@@ -1,4 +1,4 @@
-"""Unified Pydantic schemas for AgenticTM.
+"""Unified Pydantic schemas for ArgusTM.
 
 Canonical data models used for validation, serialization, and
 contract enforcement across all agents and API endpoints.

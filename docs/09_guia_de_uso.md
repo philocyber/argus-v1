@@ -31,8 +31,8 @@
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/your-org/AgenticTM.git
-cd AgenticTM
+git clone https://github.com/philocyber/ArgusTM.git
+cd ArgusTM
 ```
 
 ### 2. Crear Entorno Virtual
@@ -150,7 +150,7 @@ Si no se provee `--input` ni `--file`, el CLI espera input por stdin (terminá c
 #### Output del CLI
 
 ```
-╭─────────── AgenticTM -- Threat Modeling ───────────╮
+╭─────────── ArgusTM -- Threat Modeling ───────────╮
 │ Sistema: Mi Sistema                                  │
 │ Input: 2847 caracteres                               │
 │ Categorías: auto                                     │
@@ -473,7 +473,7 @@ flowchart TD
 
 ```bash
 # 1. Setup
-git clone https://github.com/your-org/AgenticTM.git && cd AgenticTM
+git clone https://github.com/philocyber/ArgusTM.git && cd ArgusTM
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
 

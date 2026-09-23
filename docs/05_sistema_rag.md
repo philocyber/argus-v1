@@ -1,12 +1,12 @@
 # 05 — Sistema RAG
 
-> Arquitectura dual ChromaDB + PageIndex: cómo AgenticTM consulta su knowledge base.
+> Arquitectura dual ChromaDB + PageIndex: cómo ArgusTM consulta su knowledge base.
 
 ---
 
 ## Visión General
 
-El sistema RAG (Retrieval-Augmented Generation) de AgenticTM combina **dos estrategias de retrieval** para maximizar la calidad del contexto proporcionado a los agentes:
+El sistema RAG (Retrieval-Augmented Generation) de ArgusTM combina **dos estrategias de retrieval** para maximizar la calidad del contexto proporcionado a los agentes:
 
 1. **Vector Search** (ChromaDB) — Búsqueda por similitud semántica sobre chunks de documentos
 2. **Tree Navigation** (PageIndex) — Navegación estructural por la tabla de contenidos de PDFs
@@ -436,7 +436,7 @@ python cli.py index --path /ruta/a/mi/rag
 ```mermaid
 sequenceDiagram
     participant CLI as CLI / API
-    participant Core as AgenticTM
+    participant Core as ArgusTM
     participant Indexer as indexer.py
     participant PI as page_index.py
     participant Chroma as ChromaDB
@@ -473,7 +473,7 @@ sequenceDiagram
 ### Resultado de Ejemplo
 
 ```
-╭──────── AgenticTM -- RAG Indexing ────────╮
+╭──────── ArgusTM -- RAG Indexing ────────╮
 │ RAG Sources: rag                          │
 ╰───────────────────────────────────────────╯
 

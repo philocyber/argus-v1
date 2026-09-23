@@ -1,4 +1,4 @@
-# 📖 AgenticTM — Documentación Completa
+# 📖 ArgusTM — Documentación Completa
 
 > **Versión:** 0.3.2 · **Última actualización:** Febrero 2026
 > **Motor:** Pipeline multi-agente de Threat Modeling con LangGraph + Ollama
@@ -52,7 +52,7 @@
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│                    AgenticTM v0.3.2                   │
+│                    ArgusTM v0.3.2                   │
 ├──────────────────────────────────────────────────────┤
 │  Frontend   │ SPA HTML/JS · Mermaid v11 · marked.js  │
 │  API        │ FastAPI · SSE · aiosqlite · uvicorn     │
@@ -69,7 +69,7 @@
 ## Convenciones de Esta Documentación
 
 - **Idioma**: Español neutro/rioplatense
-- **Diagramas**: Mermaid (renderizables en GitHub, VS Code, y la propia UI de AgenticTM)
+- **Diagramas**: Mermaid (renderizables en GitHub, VS Code, y la propia UI de ArgusTM)
 - **Código**: Bloques con syntax highlighting de Python, JSON, YAML, bash
 - **Tablas**: Para inventarios de agentes, configuraciones, endpoints, modelos
 - **Navegación**: Links relativos entre documentos (`[texto](archivo.md)`)

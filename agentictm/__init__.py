@@ -1,4 +1,4 @@
-"""AgenticTM — Multi-agent Threat Modeling framework."""
+"""ArgusTM — Multi-agent Threat Modeling framework."""
 
 __version__ = "2.0.0"
 

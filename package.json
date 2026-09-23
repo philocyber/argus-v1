@@ -1,6 +1,6 @@
 {
   "name": "agentictm",
-  "productName": "AgenticTM",
+  "productName": "ArgusTM",
   "version": "0.3.6",
   "description": "Multi-agent threat modeling platform with LangGraph orchestration and local LLM support",
   "main": "electron/main.js",
@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "AgenticTM",
+  "author": "PhiloCyber",
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"

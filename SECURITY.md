@@ -2,7 +2,7 @@
 
 ## Supported deployment model
 
-AgenticTM is designed as a local-first tool. Before exposing it to any shared or public network, you should:
+ArgusTM is designed as a local-first tool. Before exposing it to any shared or public network, you should:
 
 - set `AGENTICTM_API_KEY`
 - restrict `AGENTICTM_CORS_ORIGINS`
@@ -13,7 +13,7 @@ AgenticTM is designed as a local-first tool. Before exposing it to any shared or
 Please do not open a public issue for sensitive security reports.
 
 - Email: `security@philocyber.com`
-- Subject: `AgenticTM security report`
+- Subject: `ArgusTM security report`
 
 Include:
 

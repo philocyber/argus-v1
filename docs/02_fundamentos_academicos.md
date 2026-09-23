@@ -1,12 +1,12 @@
 # 02 — Fundamentos Académicos
 
-> Los frameworks y papers de investigación que alimentan la inteligencia de AgenticTM.
+> Los frameworks y papers de investigación que alimentan la inteligencia de ArgusTM.
 
 ---
 
 ## Panorama
 
-AgenticTM no implementa una sola metodología — integra **6 frameworks de threat modeling**, **4 taxonomías de amenazas AI**, y **3 bases de datos de ataque** en un pipeline unificado. Cada agente especializado domina una porción de este corpus, y el Threat Synthesizer consolida todo en un modelo de amenazas cohesivo.
+ArgusTM no implementa una sola metodología — integra **6 frameworks de threat modeling**, **4 taxonomías de amenazas AI**, y **3 bases de datos de ataque** en un pipeline unificado. Cada agente especializado domina una porción de este corpus, y el Threat Synthesizer consolida todo en un modelo de amenazas cohesivo.
 
 ```mermaid
 graph TB
@@ -64,7 +64,7 @@ STRIDE es un modelo de clasificación de amenazas desarrollado por Loren Kohnfel
 | **D**enial of Service | Disponibilidad | Degradar o interrumpir el servicio |
 | **E**levation of Privilege | Autorización | Obtener permisos superiores a los asignados |
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El **STRIDE Analyst** (`stride_analyst.py`) aplica **STRIDE-per-element**: examina cada componente, flujo de datos y boundary del sistema, y evalúa cuál de las 6 categorías aplica. Usa el tier `stride_json` (Qwen3.5:9b por defecto) para producir un análisis estructurado con razonamiento detallado.
 
@@ -107,7 +107,7 @@ PASTA es una metodología de threat modeling centrada en el **riesgo de negocio*
 | 6 | Modelado de Ataques | Simular ataques y construir árboles de ataque |
 | 7 | Análisis de Riesgo e Impacto | Cuantificar riesgo y priorizar remediación |
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El **PASTA Analyst** (`pasta_analyst.py`) condensa las 7 etapas en una sola invocación LLM que produce "narrativas de ataque" — historias detalladas de 3-5 oraciones que describen cómo un atacante explotaría una vulnerabilidad específica.
 
@@ -129,7 +129,7 @@ El **PASTA Analyst** (`pasta_analyst.py`) condensa las 7 etapas en una sola invo
 ```
 
 ### Diferencia con STRIDE
-Mientras STRIDE clasifica por **tipo de amenaza** (categoría abstracta), PASTA clasifica por **escenario de ataque** (narrativa concreta orientada al negocio). AgenticTM usa ambas perspectivas para maximizar cobertura.
+Mientras STRIDE clasifica por **tipo de amenaza** (categoría abstracta), PASTA clasifica por **escenario de ataque** (narrativa concreta orientada al negocio). ArgusTM usa ambas perspectivas para maximizar cobertura.
 
 ### Referencias
 - UcedaVélez, T. & Morana, M. (2015). *Risk Centric Threat Modeling*. Wiley.
@@ -147,7 +147,7 @@ Un Attack Tree es una estructura jerárquica donde:
 
 El **cheapest path** (camino más barato) es el conjunto de acciones con menor dificultad total que logra el objetivo raíz.
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El **Attack Tree Analyst** tiene **dos pasadas**:
 
@@ -198,7 +198,7 @@ El **total DREAD** (0-50) determina la prioridad:
 | 11-24 | 🟡 Medium |
 | 1-10 | 🟢 Low |
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El scoring DREAD se asigna en **dos etapas**:
 
@@ -212,7 +212,7 @@ $$\text{DREAD Total} = D + R + E + A + D$$
 $$\text{Priority} = \begin{cases} \text{Critical} & \text{si } \text{DREAD} \geq 40 \\ \text{High} & \text{si } 25 \leq \text{DREAD} < 40 \\ \text{Medium} & \text{si } 11 \leq \text{DREAD} < 25 \\ \text{Low} & \text{si } \text{DREAD} < 11 \end{cases}$$
 
 ### Notas
-DREAD fue oficialmente descontinuado por Microsoft en 2008 por considerarlo subjetivo. Sin embargo, sigue siendo ampliamente usado en la industria, y el doble scoring (Synthesizer + Validator) de AgenticTM mitiga parcialmente la subjetividad.
+DREAD fue oficialmente descontinuado por Microsoft en 2008 por considerarlo subjetivo. Sin embargo, sigue siendo ampliamente usado en la industria, y el doble scoring (Synthesizer + Validator) de ArgusTM mitiga parcialmente la subjetividad.
 
 ---
 
@@ -232,7 +232,7 @@ MAESTRO es un framework de la Cloud Security Alliance (CSA) diseñado específic
 | L6 | Agent-to-Agent Communication | Multi-agent protocols, trust, message tampering, authority spoofing |
 | L7 | Ecosystem & Governance | Compliance, audit trails, model versioning, human oversight |
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El **MAESTRO Analyst** (`maestro_analyst.py`) se activa **condicionalmente** — solo cuando detecta ≥30 keywords de AI en el input del sistema. Combina MAESTRO con OWASP Agentic Applications Top 10 (ASI01-ASI10).
 
@@ -315,7 +315,7 @@ PLOT4ai es una biblioteca de tarjetas (deck) con amenazas específicas de AI/ML 
 | Ethics | Consideraciones éticas de AI |
 | Accountability/HITL | Supervisión humana |
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El deck PLOT4ai (`rag/deck.json`) está indexado en el vector store `ai_threats`. Los agentes AI Threat y MAESTRO lo consultan vía la herramienta `rag_query_ai_threats()`.
 
@@ -339,7 +339,7 @@ Los protocolos analizados incluyen:
 - **Agora** — Protocol Labs
 - **ANP** (Agent Network Protocol) — Community
 
-### Implementación en AgenticTM
+### Implementación en ArgusTM
 
 El **AI Threat Analyst** detecta dinámicamente qué protocolos están presentes en el sistema analizado y agrega instrucciones específicas al prompt:
 
@@ -410,9 +410,9 @@ IA-2:  Identification and Authentication
 
 ---
 
-## Convergencia en AgenticTM
+## Convergencia en ArgusTM
 
-La clave de AgenticTM no es usar un framework aislado, sino **su convergencia**:
+La clave de ArgusTM no es usar un framework aislado, sino **su convergencia**:
 
 1. **STRIDE** identifica amenazas por categoría abstracta
 2. **PASTA** agrega contexto de negocio y narrativas de ataque

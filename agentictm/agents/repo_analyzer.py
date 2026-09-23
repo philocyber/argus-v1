@@ -211,7 +211,7 @@ def _api_request(
     platform: str = "github",
 ) -> dict | list | None:
     """Make an authenticated API request."""
-    headers = {"User-Agent": "AgenticTM/1.0", "Accept": "application/json"}
+    headers = {"User-Agent": "ArgusTM/1.0", "Accept": "application/json"}
 
     if token:
         if platform == "github":
@@ -339,7 +339,7 @@ def _fetch_gitlab_file(
     encoded_path = urllib.request.quote(path, safe="")
     url = f"{_GITLAB_API}/projects/{project_id}/repository/files/{encoded_path}/raw"
     try:
-        headers = {"User-Agent": "AgenticTM/1.0"}
+        headers = {"User-Agent": "ArgusTM/1.0"}
         if token:
             headers["PRIVATE-TOKEN"] = token
         req = urllib.request.Request(url, headers=headers)

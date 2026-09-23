@@ -6,7 +6,7 @@
 
 ## Archivo `config.json`
 
-El archivo `config.json` en la raíz del proyecto controla toda la configuración de AgenticTM. Se carga al inicio via `AgenticTMConfig.load()`.
+El archivo `config.json` en la raíz del proyecto controla toda la configuración de ArgusTM. Se carga al inicio via `AgenticTMConfig.load()`.
 
 ### Estructura Completa (con defaults)
 

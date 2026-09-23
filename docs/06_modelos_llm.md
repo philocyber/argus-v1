@@ -6,7 +6,7 @@
 
 ## Arquitectura de 4 Tiers
 
-AgenticTM organiza sus modelos LLM en **4 tiers funcionales**, cada uno optimizado para un tipo de tarea:
+ArgusTM organiza sus modelos LLM en **4 tiers funcionales**, cada uno optimizado para un tipo de tarea:
 
 ```mermaid
 graph LR

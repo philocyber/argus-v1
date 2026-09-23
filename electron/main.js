@@ -270,7 +270,7 @@ function startBackend() {
       if (!isQuitting && mainWindow && !mainWindow.isDestroyed()) {
         dialog.showErrorBox(
           'Backend Stopped',
-          `The AgenticTM backend process exited unexpectedly (code ${code}).\nThe application will close.`,
+          `The ArgusTM backend process exited unexpectedly (code ${code}).\nThe application will close.`,
         );
         app.quit();
       }
@@ -452,7 +452,7 @@ app.on('ready', async () => {
         title: 'Ollama Not Detected',
         message: 'Ollama does not appear to be running.',
         detail:
-          'AgenticTM requires Ollama for local LLM inference.\n\n' +
+          'ArgusTM requires Ollama for local LLM inference.\n\n' +
           'Please start Ollama and ensure it is listening on port 11434.\n' +
           'Download from: https://ollama.com',
         buttons: ['Continue Anyway', 'Open Ollama Website', 'Quit'],
@@ -475,7 +475,7 @@ app.on('ready', async () => {
     console.error('[Electron] Startup failed:', err);
     dialog.showErrorBox(
       'Startup Failed',
-      `Could not start AgenticTM backend:\n\n${err.message}\n\nMake sure Python 3.11+ is installed and dependencies are available.`,
+      `Could not start ArgusTM backend:\n\n${err.message}\n\nMake sure Python 3.11+ is installed and dependencies are available.`,
     );
     app.quit();
   }

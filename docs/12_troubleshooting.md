@@ -173,7 +173,7 @@ ollama ps
 ## Estructura de Archivos de Referencia
 
 ```
-AgenticTM/
+ArgusTM/
 ├── cli.py                          # CLI Typer (analyze, index, init)
 ├── run.py                          # Server launcher (uvicorn + SO_REUSEADDR)
 ├── main.py                         # Entrypoint alternativo
@@ -185,7 +185,7 @@ AgenticTM/
 ├── agentictm/
 │   ├── __init__.py
 │   ├── config.py                   # Pydantic config models
-│   ├── core.py                     # AgenticTM orchestrator class
+│   ├── core.py                     # ArgusTM orchestrator class
 │   ├── models.py                   # UnifiedThreat, API schemas
 │   ├── state.py                    # ThreatModelState TypedDict
 │   ├── agents/

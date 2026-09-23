@@ -1,4 +1,4 @@
-# Evaluación Independiente de AgenticTM — Auditoría Profunda y Plan de Acción
+# Evaluación Independiente de ArgusTM — Auditoría Profunda y Plan de Acción
 
 > **Evaluador:** GitHub Copilot (Claude Opus 4.6)  
 > **Fecha:** 2025-07-15  
@@ -29,7 +29,7 @@
 
 ## 1. Resumen Ejecutivo
 
-AgenticTM es un sistema de threat modeling multi-agente **ambicioso y bien diseñado** en su arquitectura conceptual. El pipeline de 12 nodos en LangGraph con fan-out paralelo, debate adversarial, y síntesis con validación DREAD es una propuesta arquitectónica **sólida y diferenciadora**. La integración de 5 metodologías (STRIDE, PASTA, Attack Tree, MAESTRO, AI Threat), RAG con 5 vectorstores, VLM para diagramas, y debate Red/Blue Team es una combinación que no he visto en herramientas similares.
+ArgusTM es un sistema de threat modeling multi-agente **ambicioso y bien diseñado** en su arquitectura conceptual. El pipeline de 12 nodos en LangGraph con fan-out paralelo, debate adversarial, y síntesis con validación DREAD es una propuesta arquitectónica **sólida y diferenciadora**. La integración de 5 metodologías (STRIDE, PASTA, Attack Tree, MAESTRO, AI Threat), RAG con 5 vectorstores, VLM para diagramas, y debate Red/Blue Team es una combinación que no he visto en herramientas similares.
 
 Sin embargo, **la ejecución tiene brechas significativas** entre la visión arquitectónica y la implementación actual. Hay funcionalidades configuradas pero no conectadas, inconsistencias que degradan la calidad del output con modelos pequeños (8B), y fragilidades en el parsing que pueden causar pérdida silenciosa de datos.
 
@@ -520,7 +520,7 @@ El frontend es un SPA single-file en `index.html` con localStorage + server pers
 
 ## Opinión Final Honesta
 
-AgenticTM tiene **la arquitectura correcta**. La combinación de multi-agent analysis, RAG-augmented reasoning, adversarial debate, y multi-methodology coverage es genuinamente innovadora. No conozco otra herramienta open-source que combine todo esto.
+ArgusTM tiene **la arquitectura correcta**. La combinación de multi-agent analysis, RAG-augmented reasoning, adversarial debate, y multi-methodology coverage es genuinamente innovadora. No conozco otra herramienta open-source que combine todo esto.
 
 Sin embargo, la distancia entre "la arquitectura es correcta" y "el output es confiable" se cierra con **engineering discipline**, no con más features. Los problemas más impactantes (JSON parsing, PDF upload, idioma inconsistente) son **fáciles de arreglar** — la mayoría son cambios de pocas líneas.
 

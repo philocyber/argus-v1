@@ -146,7 +146,7 @@ def update_knowledge_base(
         # Download
         try:
             logger.info("[KB Updater] Downloading %s...", name)
-            req = urllib.request.Request(source["url"], headers={"User-Agent": "AgenticTM/1.0"})
+            req = urllib.request.Request(source["url"], headers={"User-Agent": "ArgusTM/1.0"})
             with urllib.request.urlopen(req, timeout=timeout) as response:
                 content = response.read()
 

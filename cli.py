@@ -1,4 +1,4 @@
-"""AgenticTM CLI — Command-line interface."""
+"""ArgusTM CLI — Command-line interface."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from rich.table import Table
 
 app = typer.Typer(
     name="agentictm",
-    help="AgenticTM -- Multi-Agent Threat Modeling System",
+    help="ArgusTM -- Multi-Agent Threat Modeling System",
     add_completion=False,
 )
 console = Console()
@@ -145,7 +145,7 @@ def analyze(
         console.print(
             Panel(
                 f"[bold]System:[/bold] {system_name}\n[bold]Mode:[/bold] {mode_label}\n[bold]Input:[/bold] {len(system_input)} characters\n[bold]Categories:[/bold] {', '.join(cat_list)}",
-                title="AgenticTM -- Threat Modeling",
+                title="ArgusTM -- Threat Modeling",
                 border_style="cyan",
             )
         )
@@ -342,7 +342,7 @@ def index(
     console.print(
         Panel(
             f"[bold]RAG Sources:[/bold] {knowledge_base}",
-            title="AgenticTM -- RAG Indexing",
+            title="ArgusTM -- RAG Indexing",
             border_style="cyan",
         )
     )

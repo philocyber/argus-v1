@@ -1,4 +1,4 @@
-# Electron Migration Plan — AgenticTM Desktop
+# Electron Migration Plan — ArgusTM Desktop
 
 > Target: M4 MacBook Pro (16GB) with local Ollama
 

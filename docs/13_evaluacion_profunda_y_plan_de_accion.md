@@ -1,4 +1,4 @@
-# Evaluación Profunda de AgenticTM y Plan de Acción
+# Evaluación Profunda de ArgusTM y Plan de Acción
 
 Fecha: 2026-02-24
 

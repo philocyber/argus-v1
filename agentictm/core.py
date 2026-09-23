@@ -1,4 +1,4 @@
-"""AgenticTM — Main entry point."""
+"""ArgusTM — Main entry point."""
 
 from __future__ import annotations
 

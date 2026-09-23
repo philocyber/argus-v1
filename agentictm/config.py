@@ -1,4 +1,4 @@
-"""Global configuration for AgenticTM."""
+"""Global configuration for ArgusTM."""
 
 from __future__ import annotations
 
@@ -178,7 +178,7 @@ class SecurityConfig(BaseModel):
 
 
 class AgenticTMConfig(BaseModel):
-    """Complete AgenticTM configuration."""
+    """Complete ArgusTM configuration."""
 
     # LLM configs
     quick_thinker: LLMConfig = Field(
