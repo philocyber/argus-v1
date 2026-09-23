@@ -70,7 +70,7 @@ module.exports = {
       config: {
         options: {
           maintainer: 'PhiloCyber',
-          homepage: 'https://github.com/philocyber/ArgusTM',
+          homepage: 'https://github.com/philocyber/argus-tm-v1',
           icon: path.resolve(__dirname, 'electron', 'icons', 'logo.png'),
         },
       },
@@ -79,7 +79,7 @@ module.exports = {
       name: '@electron-forge/maker-rpm',
       config: {
         options: {
-          homepage: 'https://github.com/philocyber/ArgusTM',
+          homepage: 'https://github.com/philocyber/argus-tm-v1',
           icon: path.resolve(__dirname, 'electron', 'icons', 'logo.png'),
         },
       },

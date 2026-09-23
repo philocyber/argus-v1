@@ -31,8 +31,8 @@
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/philocyber/ArgusTM.git
-cd ArgusTM
+git clone https://github.com/philocyber/argus-tm-v1.git
+cd argus-tm-v1
 ```
 
 ### 2. Crear Entorno Virtual
@@ -473,7 +473,7 @@ flowchart TD
 
 ```bash
 # 1. Setup
-git clone https://github.com/philocyber/ArgusTM.git && cd ArgusTM
+git clone https://github.com/philocyber/argus-tm-v1.git && cd argus-tm-v1
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
 

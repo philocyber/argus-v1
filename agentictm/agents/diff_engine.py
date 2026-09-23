@@ -242,7 +242,7 @@ def diff_to_sarif(diff: dict[str, Any], system_name: str = "System") -> str:
                 "driver": {
                     "name": "ArgusTM-Diff",
                     "version": __version__,
-                    "informationUri": "https://github.com/philocyber/ArgusTM",
+                    "informationUri": "https://github.com/philocyber/argus-tm-v1",
                 }
             },
             "results": results,

@@ -12,8 +12,8 @@ Be respectful, constructive, and inclusive. Cybersecurity is a serious domain; t
 2. **Clone** your fork locally:
 
 ```bash
-git clone https://github.com/<your-user>/ArgusTM.git
-cd ArgusTM
+git clone https://github.com/<your-user>/argus-tm-v1.git
+cd argus-tm-v1
 ```
 
 3. **Create a branch** from `main`:
@@ -82,7 +82,7 @@ ruff format agentictm/
 
 ## Reporting Issues
 
-Open an issue on [GitHub Issues](https://github.com/philocyber/ArgusTM/issues) with:
+Open an issue on [GitHub Issues](https://github.com/philocyber/argus-tm-v1/issues) with:
 
 - A clear title and description.
 - Steps to reproduce (if it's a bug).

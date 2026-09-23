@@ -904,7 +904,7 @@ def generate_sarif(state: ThreatModelState) -> str:
                     "driver": {
                         "name": "ArgusTM",
                         "version": __version__,
-                        "informationUri": "https://github.com/philocyber/ArgusTM",
+                        "informationUri": "https://github.com/philocyber/argus-tm-v1",
                         "rules": rules,
                     },
                 },

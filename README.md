@@ -93,8 +93,8 @@ Phase V     Output Localizer -> Report Generator
 ### Option A — One-liner with Make (macOS)
 
 ```bash
-git clone https://github.com/philocyber/ArgusTM.git
-cd ArgusTM
+git clone https://github.com/philocyber/argus-tm-v1.git
+cd argus-tm-v1
 make setup    # installs Ollama, pulls models, creates venv, installs deps, indexes KB
 make run      # starts the server at http://localhost:8000
 ```
@@ -152,8 +152,8 @@ ollama pull nomic-embed-text-v2-moe   # 8K context, multilingual MoE
 #### 3. Clone and install
 
 ```bash
-git clone https://github.com/philocyber/ArgusTM.git
-cd ArgusTM
+git clone https://github.com/philocyber/argus-tm-v1.git
+cd argus-tm-v1
 
 python -m venv .venv
 source .venv/bin/activate    # Linux/macOS
@@ -182,8 +182,8 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 ### Option C — Docker
 
 ```bash
-git clone https://github.com/philocyber/ArgusTM.git
-cd ArgusTM
+git clone https://github.com/philocyber/argus-tm-v1.git
+cd argus-tm-v1
 docker compose up
 ```
 
